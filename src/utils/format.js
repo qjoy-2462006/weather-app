@@ -36,3 +36,11 @@ export function groupForecastByDay(forecast) {
         description: d.best.weather[0].description,
     }))
 }
+
+export function formatDay(dateStr) {
+    return new Date(`${dateStr}T00:00:00`).toLocaleDateString('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+    })
+}
