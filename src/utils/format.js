@@ -1,6 +1,9 @@
+
 export function getIconUrl(icon) {
-    return `https://openweathermap.org/img/wn/${icon}@2x.png`
-    }
+  if (!icon) return ''
+
+  return `https://openweathermap.org/img/wn/${icon}@2x.png`
+}
 
     // forecast list (၃ နာရီခြား ၄၀ items) ကို ရက်အလိုက် အုပ်စုခွဲ
 export function groupForecastByDay(forecast) {
